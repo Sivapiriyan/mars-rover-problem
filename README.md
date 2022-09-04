@@ -2,7 +2,7 @@
 
 ### Quickstart
 
-Node.js is the only global dependency for this project. Please install node > 12 with npm.
+Node.js with Typescript
 
     npm install
     npm start
