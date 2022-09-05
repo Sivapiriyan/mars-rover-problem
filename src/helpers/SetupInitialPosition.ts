@@ -29,7 +29,7 @@ export const setupInitialPosition = (initialPosition: string) => {
     // to check y axies value is NOT a number thorw error
     throw new Error(VALIDATIONS.INVLAID_Y_AXIS);
   }
-  if (typeof initialDirection !== "string") {
+  if (!isNaN(parseInt(initialDirection))) {
     // to check direction value is NOT a string thorw error
     throw new Error(VALIDATIONS.INVLAID_DIRECTION_VALUE);
   }

@@ -30,7 +30,13 @@ async function moveRover(data: any) {
       // in this for loop cut 2 elements for each rover ['1 2 N', 'LMLMLMLMM', '3 3 E', 'MMRMMRMRRM' ]
       // '1 2 N', 'LMLMLMLMM',
       // '3 3 E', 'MMRMMRMRRM'
-      rover(lines[i], lines[i + 1], xAxiesMax, yAxiesMax);
+      const { x, y, direction } = rover(
+        lines[i],
+        lines[i + 1],
+        xAxiesMax,
+        yAxiesMax
+      );
+      console.log(`${x} ${y} ${direction}`);
     }
   } catch (error: any) {
     Logger.error(error.message);

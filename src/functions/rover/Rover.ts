@@ -78,12 +78,9 @@ export function rover(
         } else {
           throw new Error(VALIDATIONS.INVALID_PLACE);
         }
-
-        break;
-      default:
         break;
     }
   });
 
-  console.log(`${x} ${y} ${direction}`);
+  return { x, y, direction };
 }
